@@ -1,9 +1,9 @@
 hex:
-	avr-gcc -Os -DF_CPU=8000000 -mmcu=atmega328p -c led_flash.c
-	avr-gcc -DF_CPU=8000000 -mmcu=atmega328p -o led_flash.elf led_flash.o
-	avr-objcopy -O ihex led_flash.elf led_flash.hex
-	rm led_flash.o
-	rm led_flash.elf
+	avr-gcc -Os -DF_CPU=8000000 -mmcu=atmega328p -c ledTest.c
+	avr-gcc -DF_CPU=8000000 -mmcu=atmega328p -o ledTest.elf ledTest.o
+	avr-objcopy -O ihex ledTest.elf ledTest.hex
+	rm ledTest.o
+	rm ledTest.elf
 
 
 
