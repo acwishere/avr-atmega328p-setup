@@ -1,6 +1,6 @@
 hex:
-	avr-gcc -Os -DF_CPU=8000000 -mmcu=atmega328p -c ledTest.c
-	avr-gcc -DF_CPU=8000000 -mmcu=atmega328p -o ledTest.elf ledTest.o
+	avr-gcc -Os -DF_CPU=16000000 -mmcu=atmega328p -c ledTest.c
+	avr-gcc -DF_CPU=16000000 -mmcu=atmega328p -o ledTest.elf ledTest.o
 	avr-objcopy -O ihex ledTest.elf ledTest.hex
 	rm ledTest.o
 	rm ledTest.elf
@@ -8,4 +8,4 @@ hex:
 
 
 flash:
-	avrdude -c arduino -p  m328p -P /dev/ttyACM0 -U flash:w:led_flash.hex
+	avrdude -c arduino -p  m328p -P /dev/ttyACM0 -U flash:w:ledTest.hex
