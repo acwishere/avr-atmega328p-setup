@@ -4,6 +4,8 @@ All files (Makefile, first program) needed to setup linux console (I use Ubuntu)
 
 Bypasses Arduino IDE abstraction and now you can code using an avr library. 
 
+This generated .hex file named ledTest.hex will have GPIO pin 19 blink.
+
 STEPS TO SETUP
 
 1. Install AVR-GCC Toolchain if you haven't already. This can be done in console with the command
